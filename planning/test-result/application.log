@@ -1,0 +1,8 @@
+16 oct. 2013 11:40:42,343 INFO  ~ Starting C:\Users\Fat G\Downloads\play-1.2.5.3\play-1.2.5.3\planning
+16 oct. 2013 11:40:43,180 WARN  ~ You're running Play! in DEV mode
+16 oct. 2013 11:40:43,279 INFO  ~ Listening for HTTP on port 9000 (Waiting a first request to start) ...
+16 oct. 2013 11:41:00,239 INFO  ~ Connected to jdbc:h2:mem:play;MODE=MYSQL;LOCK_MODE=0
+16 oct. 2013 11:41:01,027 INFO  ~ Application 'planning' is now started !
+16 oct. 2013 12:00:08,131 WARN  ~ SQL Error: 42122, SQLState: 42S22
+16 oct. 2013 12:00:08,131 ERROR ~ Column "BYLASTNAME" not found; SQL statement:
+select user0_.id as id2_, user0_.firstName as firstName2_, user0_.lastName as lastName2_, user0_.password as password2_ from User user0_ where bylastName=? limit ? [42122-166]
