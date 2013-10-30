@@ -1,53 +1,10 @@
 #{extends 'main.html' /}
 #{set title:'Home' /}
 
-#{form @Members.save(), class:'form-horizontal'}
-
-<fieldset>
-   <legend>Incident</legend>  
-   
-   
-   <!-- lastName -->
-    <div class="control-group">
-	  <label class="control-label" id="label_member_lastName" for="member_lastName">Nom</label> 
-      <div class="controls">
-	  <input type="text"  placeholder="Nom" name="member.lastName" id="member_lastName"  />
-      </div>
-   </div>
-   
-     <!-- firstName -->
-    <div class="control-group">
-	  <label class="control-label" id="label_member_firstName" for="member_firstName">Prenom</label> 
-      <div class="controls">
-	  <input type="text"  placeholder="Prenom" name="member.firstName" id="member_firstName"  />
-      </div>
-   </div>
-   
-     <!-- email -->
-    <div class="control-group">
-	  <label class="control-label" id="label_member_email" for="member_email">email</label> 
-      <div class="controls">
-	  <input type="text"  placeholder="Email" name="member.email" id="member_email"  />
-      </div>
-   </div>
-   
-   
-     <!-- password -->
-    <div class="control-group">
-	  <label class="control-label" id="label_member_password" for="member_password">password</label> 
-      <div class="controls">
-	  <input type="text"  placeholder="Password" name="member.password" id="member_password"  />
-      </div>
-   </div>
-   
-   <!-- Bouton Enregistrer -->
-   <div class="control-group">
-      <div class="controls">
-      <button type="submit" class="btn">Enregistrer</button>
-      </div>
-   </div>
-   
-   </fieldset>
-   
-
-  #{/form}
+ <p> Hello ${user} </p>
+ 
+ <ul> 
+ 
+ <li>  <a href="@{Secure.logout()}">Log out</a> </li>
+ 
+ </ul> 

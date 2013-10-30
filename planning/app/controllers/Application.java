@@ -14,11 +14,21 @@ import models.*;
 public class Application extends Controller {
 
 	
+	@Before
+    static void setConnectedUser() {
+        if(Security.isConnected()) {
+            Member m = Member.find("byEmail", Security.connected()).first();
+            renderArgs.put("user", m.lastName);
+        }
+    }
+	
     public static void index() {
       	
     	render();
     		
     }
+    
+   
     
    
 

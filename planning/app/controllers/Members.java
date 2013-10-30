@@ -10,4 +10,9 @@ public class Members extends Controller {
 		p.save();
 		
 	}
+	
+	 public static void signup()
+	    {
+	    	render();
+	    }
 }
