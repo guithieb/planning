@@ -26,6 +26,9 @@ public class Member extends Model {
 	
 	//Profile photo
 	public  Blob picture;
+	public Integer age;
+	public String job;
+	
 	
 	public Member(String firstName, String lastName,String email,String password){
 		this.firstName = firstName;
