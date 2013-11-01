@@ -1,10 +1,14 @@
 #{extends 'main.html' /}
 #{set title:'Home' /}
 
- <p> Hello ${user} </p>
+ <p> Hello ${m.lastName} </p>
  
  <ul> 
  
  <li>  <a href="@{Secure.logout()}">Log out</a> </li>
  
  </ul> 
+ 
+ <a href="@{Members.calendar()}"> Your Calendar </a> </br>
+ 
+  <a href="@{Members.profile(m.id)}"> Your Profile </a> 

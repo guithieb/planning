@@ -18,7 +18,7 @@ public class Application extends Controller {
     static void setConnectedUser() {
         if(Security.isConnected()) {
             Member m = Member.find("byEmail", Security.connected()).first();
-            renderArgs.put("user", m.lastName);
+            render(m);
         }
     }
 	

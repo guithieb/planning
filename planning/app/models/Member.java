@@ -6,6 +6,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
+import play.db.jpa.Blob;
 import play.db.jpa.Model;
 
 @Entity
@@ -22,6 +23,9 @@ public class Member extends Model {
 	@Column(unique=true)
 	public String email;
 	public String password;
+	
+	//Profile photo
+	public  Blob picture;
 	
 	public Member(String firstName, String lastName,String email,String password){
 		this.firstName = firstName;
