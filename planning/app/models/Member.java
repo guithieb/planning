@@ -1,10 +1,13 @@
 package models;
 
+import java.util.Collection;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 
 import play.db.jpa.Blob;
 import play.db.jpa.Model;
@@ -29,6 +32,8 @@ public class Member extends Model {
 	public Integer age;
 	public String job;
 	
+
+
 	
 	public Member(String firstName, String lastName,String email,String password){
 		this.firstName = firstName;

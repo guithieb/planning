@@ -4,17 +4,41 @@
     <head>
         <title>#{get 'title' /}</title>
         <meta charset="${_response_encoding}">
+        
+        <!-- stylesheets -->
         <link rel="stylesheet" media="screen" href="@{'/public/stylesheets/main.css'}">
-        <link href="/public/stylesheets/bootstrap.css" rel="stylesheet" media="screen">
-        <link href="/public/stylesheets/bootstrap.min.css" rel="stylesheet" media="screen">
-         <link href="/public/stylesheets/bootstrap-theme.css" rel="stylesheet" media="screen">
+        <link href="@{'/public/stylesheets/bootstrap.css'}" rel="stylesheet" media="screen">
+        <link href="@{'/public/stylesheets/bootstrap.min.css'}" rel="stylesheet" media="screen">
+         <link href="@{'/public/stylesheets/bootstrap-theme.css'}" rel="stylesheet" media="screen">
+         <link href="@{'/public/stylesheets/bootstrap-datetimepicker.min.css'}" rel="stylesheet" media="screen">
+         <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.no-icons.min.css" rel="stylesheet">
+         <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.0/css/font-awesome.css" rel="stylesheet">
         #{get 'moreStyles' /}
         <link rel="shortcut icon" type="image/png" href="@{'/public/images/favicon.png'}">
+        
+        <!-- Javascript-->
         <script src="@{'/public/javascripts/jquery-1.6.4.min.js'}" type="text/javascript" charset="${_response_encoding}"></script>
         <script src="@{'/public/javascripts/bootstrap.js'}" type="text/javascript" charset="${_response_encoding}"></script>
+         <script src="@{'/public/javascripts/bootstrap.min.js'}" type="text/javascript" charset="${_response_encoding}"></script>
+        <script src="@{'/public/javascripts/bootstrap-datepicker.js'}"></script>
+       	<script src="@{'/public/javascripts/bootstrap-datetimepicker.min.js'}"  type="text/javascript"  charset="utf-8"></script>
         #{get 'moreScripts' /}
+        
     </head>
     <body>
+    
+    	<div class="text-center"> 
+    	  <h1> Planning </h1>
+    	  </div>
+    	  
+			<div class="text-right">    	  
+    	     <a href="@{Secure.logout()}">Log out</a>
+    	     </div>  
+ 
+		 </ul> 
         #{doLayout /}
     </body>
+    
+  
+    
 </html>

@@ -22,12 +22,7 @@ public class Members extends Controller {
 
 	}
 
-	//Action for the calendar page
-	public static void calendar()
-	{
-		render();
-	}
-
+	
 	//Consult the profile page
 	public static void profile(Long id)
 	{

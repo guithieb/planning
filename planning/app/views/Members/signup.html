@@ -1,17 +1,19 @@
 #{extends 'main.html' /}
 #{set title:'Home' /}
 
+
+<div class="row-fluid">
+<div class="span3 offset4">
+
 #{form @Members.save(), class:'form-horizontal'}
 
 <fieldset>
-   <legend>Incident</legend>  
-   
-   
-   <!-- lastName -->
+    
+    <!-- lastName -->
     <div class="control-group">
 	  <label class="control-label" id="label_member_lastName" for="member_lastName">Nom</label> 
       <div class="controls">
-	  <input type="text"  placeholder="Nom" name="member.lastName" id="member_lastName"  />
+	  <input type="text"  placeholder="Nom" name="member.lastName" id="member_lastName" required />
       </div>
    </div>
    
@@ -19,7 +21,7 @@
     <div class="control-group">
 	  <label class="control-label" id="label_member_firstName" for="member_firstName">Prenom</label> 
       <div class="controls">
-	  <input type="text"  placeholder="Prenom" name="member.firstName" id="member_firstName"  />
+	  <input type="text"  placeholder="Prenom" name="member.firstName" id="member_firstName" required  />
       </div>
    </div>
    
@@ -27,7 +29,7 @@
     <div class="control-group">
 	  <label class="control-label" id="label_member_email" for="member_email">email</label> 
       <div class="controls">
-	  <input type="text"  placeholder="Email" name="member.email" id="member_email"  />
+	  <input type="text"  placeholder="Email" name="member.email" id="member_email" required />
       </div>
    </div>
    
@@ -36,18 +38,17 @@
     <div class="control-group">
 	  <label class="control-label" id="label_member_password" for="member_password">password</label> 
       <div class="controls">
-	  <input type="text"  placeholder="Password" name="member.password" id="member_password"  />
+	  <input type="text"  placeholder="Password" name="member.password" id="member_password" required  />
       </div>
    </div>
    
-   <!-- Bouton Enregistrer -->
-   <div class="control-group">
-      <div class="controls">
-      <button type="submit" class="btn">Enregistrer</button>
-      </div>
-   </div>
+    <div class="span3 offset4"> <input type="submit" class="btn btn-primary active" value="Sign Up"/> </div>
+
    
    </fieldset>
    
 
   #{/form} 
+  
+  </div>
+  </div>
