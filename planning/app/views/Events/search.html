@@ -1,0 +1,17 @@
+#{extends 'main.html' /}
+#{set title:'Home' /}
+
+
+<p> Planning of ${m.firstName} ${m.lastName} </p>
+
+#{if events.size > 0}
+
+	#{list items:events, as:'event'}
+		
+		<legend> </legend>
+ 		 <p> ${event.eventName} </p>
+ 		 <p> ${event.eventPlace} </p>
+ 		 <p> ${event.eventDate.format('dd/MM/yyyy')} </p>
+		
+	#{/list}
+ #{/if}

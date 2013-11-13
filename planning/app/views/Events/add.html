@@ -1,0 +1,77 @@
+#{extends 'main.html' /}
+#{set title:'Home' /}
+
+<div class="row-fluid">
+</br> </br>
+</div>
+
+
+<div class="row-fluid">
+<div class="span3 offset4">
+
+<!-- Formulaire ajout d'évènements -->
+#{form @Events.create(member.id), id:'form'}
+
+ <div class="control-group">
+      <div class="controls">
+	  <input type="hidden" placeholder="Id" class="span2" name="member.id" id="member_id" value="${member.id}" />
+      </div>
+   </div>
+
+<!-- Nom de l'évènement -->
+ <div class="control-group">
+	  <label class="control-label" id="label_event_eventName" for="event_eventName">Name of the event:</label> 
+      <div class="controls">
+	  <input type="text"  placeholder="Name of the event" name="event.eventName" id="event_eventName"  />
+      </div>
+   </div>
+   
+<!-- Lieu de l'évènement -->
+ <div class="control-group">
+	  <label class="control-label" id="label_event_eventPlace" for="event_eventPlace">Place of the event:</label> 
+      <div class="controls">
+	  <input type="text"  placeholder="Place of the event" name="event.eventPlace" id="event_eventPlace"  />
+      </div>
+   </div>
+   
+   <!-- Date de l'évènement -->
+   <div id="eventDate" class="input-append date"> 
+  <label id="label_event_eventDate" for="event_eventDate">Date of the event :</label> 
+    <input data-format="dd/MM/yyyy hh:mm:ss" name="event.eventDate" type="date" id="event_eventDate" />
+  </div>
+  
+	<!-- Personne participant à l'évènement -->
+	<div class="control-group">
+		<label class="control-label" id="label_event_eventParticipant"> Ajout d'un participant: </label>
+		<div class="controls">
+		<input type="email" placeholder="Share the event" name="eventParticipant" />
+		<div>
+	</div>
+   
+  <div class="span3 offset4"> <input type="submit" class="btn btn-primary active" value="Create"/> </div>
+   #{/form}
+   
+ </div>
+ </div>  
+   
+   
+   
+   
+   
+   <!--  Script DATETIMEPICKER  -->
+<script type="text/javascript">
+  $(function() {
+  
+  	  $('#dateResolved').datetimepicker({
+       
+      });
+  
+    $('#eventDate').datetimepicker({ 
+    	
+    });
+    
+  
+    
+    });
+    
+ </script>
