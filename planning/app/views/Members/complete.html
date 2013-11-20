@@ -1,8 +1,11 @@
 #{extends 'main.html' /}
 #{set title:'Home' /}
 
+<div class="row-fluid">
+	<div class="span5 offset3">
+
 <!-- Formulaire pour upload une nouvelle photo -->
-#{form @Members.save(), enctype:'multipart/form-data'}
+#{form @Members.save(),  class:'form-horizontal' }
  
  <div class="control-group">
       <div class="controls">
@@ -11,7 +14,7 @@
    </div>
  
  	<!-- Picture -->
- 	 <label class="control-label" id="label_member_picture" for="member_picture">Your Picture</label> 
+ 	 <label class="control-label" id="label_member_picture" for="member_picture">Your Picture </label> 
     <input type="file" name="member.picture" />
     
        <!--Age -->
@@ -30,5 +33,10 @@
       </div>
    </div>
     
-    <input type="submit" name="submit" value="Save" />
+     </div>
+  </div>
+    
+       <div class="span3 offset4"> <input type="submit" class="btn btn-primary active" value="Complete"/> </div>
+
 #{/form}
+

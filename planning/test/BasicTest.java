@@ -17,6 +17,15 @@ public class BasicTest extends UnitTest {
     	
     }
     
+    @Test
+    public void createEvent()
+    {
+    	Member m = new Member ("thiebaut","guillaume","durand@ece.fr","chameau89");
+    	
+    	new Event (m,"restau","paris",new Date());
+    	
+    }
+    
    
 
 }

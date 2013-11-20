@@ -1,16 +1,50 @@
 #{extends 'main.html' /}
 #{set title:'Home' /}
 
-<p>${member.lastName} ${member.firstName} </p>
+
+<h3> Your profile </h3>
+
+<div class="well well-small">
 
 <!-- Recuperation de la photo du membre -->
 
-#{if member.picture!=null}
- <img src="@{Members.getPicture(member.id)}" width="200" height="200"  class="img-circle"> 
-	
- #{/if}
- 
- </br>
-<a href="@{Application.index()}"> Home </a>
-</br>
-<a href="@{Members.complete(member.id)}"> Complete your profile </a>
+	<div class="container-fluid">
+		<div class="row-fluid">
+			
+			<div class="span2 "> 			
+		 		<p>${member.lastName} ${member.firstName} </p>
+ 			</div>
+ 			
+ 			<div class="span2">
+			#{if member.picture!=null}
+ 				<img src="@{Members.getPicture(member.id)}" width="200" height="200" class="img-polaroid" > 
+ 			#{/if}
+ 			</div>
+ 		
+ 		</div>	
+ 		
+ 		</br>
+ 		
+ 		<div class="row-fluid">
+ 			<div class="span4"> 	
+		 	#{if member.age!=null && member.job!=null}
+		 		<p> Informations : </p>
+ 			 	<p> Age : ${member.age} </p>
+ 				<p> Job : ${member.job} </p>
+ 		  	#{/if}
+ 		  	</br>
+ 		  </div>
+ 	</div>
+ </div>
+ </div>
+
+<div class="container-fluid">
+	<div class="row-fluid">
+		<div class="span2"> 	
+			<a href="@{Application.index()}"> Home </a>
+		</div>
+		<div class="span2">
+			<a href="@{Members.complete(member.id)}"> Complete your profile </a>
+		</div>
+	</div>
+</div>

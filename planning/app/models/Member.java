@@ -15,7 +15,7 @@ import play.db.jpa.Model;
 @Entity
 public class Member extends Model {
 
-/*	@Id
+	/*@Id
 	@GeneratedValue (strategy=GenerationType.IDENTITY)
     public long id;*/
 	
@@ -31,9 +31,6 @@ public class Member extends Model {
 	public  Blob picture;
 	public Integer age;
 	public String job;
-	
-
-
 	
 	public Member(String firstName, String lastName,String email,String password){
 		this.firstName = firstName;

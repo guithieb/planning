@@ -12,7 +12,7 @@
 
 
 <i class="icon-search"></i>
-<input type="text" class="search-query span3" placeholder="Recherche Nom du membre" id="member_name" name="lnameSearch">
+<input type="text"  class="search-query span3" placeholder="Recherche Nom du membre" id="member_name" name="lnameSearch">
 <input type="text" class="search-query span3" placeholder="Recherche Prénom du membre" id="member_name" name="fnameSearch">
  
 <input type="submit" value="Search" >
@@ -45,13 +45,13 @@
 </div>  
 
 
-
-</br>
-<a href="@{Application.index()}"> Home </a>
-</br>
-
-</br>
-<a href="@{Events.add(member.id)}"> Add an event </a>
-</br>
-
-
+<div class="container-fluid">
+	<div class="row-fluid">
+		<div class="span2"> 	
+			<a href="@{Application.index()}"> Home </a>
+		</div>
+		<div class="span2">
+			<a href="@{Events.add(member.id)}"> Complete your profile </a>
+		</div>
+	</div>
+</div>

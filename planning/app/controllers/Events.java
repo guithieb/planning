@@ -60,7 +60,7 @@ public class Events extends Controller{
 		email.setFrom("planning@ece.fr");
 		email.addTo(eventParticipant);
 		email.setSubject(participant.get(0).firstName + participant.get(0).lastName + " vous avez un nouveau rendez-vous");
-		email.setMsg(eventParticipant + " vous propose un rendez-vous");
+		email.setMsg(eventParticipant + " vous propose un rendez-vous: " + event.eventName + " à " +event.eventPlace + " le " +event.eventDate);
 		Mail.send(email);
 		
 		//Renvoi à la page calendar
